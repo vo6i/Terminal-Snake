@@ -2,6 +2,7 @@ import curses
 import time
 import sys
 from random import randint
+from colorama import Fore
 
 class Field:
     def __init__(self, size):
@@ -48,7 +49,7 @@ class Field:
         self.field[head[0]][head[1]] = 2
 
         for i in range(size):
-            print("DCLXVICLAN TIFF THI$ GaMe")
+            print(Fore.GREEN, "DCLXVICLAN TIFF THI$ GaMe")
             row = ''
             for j in range(size):
                 row += self.icons[ self.field[i][j] ]
